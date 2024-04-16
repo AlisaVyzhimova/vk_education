@@ -1,0 +1,2 @@
+words = input("Введите строку: ").split()
+print("{:.2f}".format(sum(len(word) for word in words) / len(words)))
