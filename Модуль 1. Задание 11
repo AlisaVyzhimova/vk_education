@@ -1,0 +1,14 @@
+import re
+from collections import Counter
+def filter_words(text):
+  cleaned_text = re.sub(r'[!.,?;:#$%^&*()]+', '', text.lower())
+    words = cleaned_text.split()
+   filtered_words = [word for word in words if len(word) >= 5 and len(set(word)) >= 4]
+    return filtered_words
+input_text = input()
+filtered_words = filter_words(input_text)
+word_counts = Counter(filtered_words)
+selected_words = [word for word, count in word_counts.items() if count > 2]
+selected_words.sort()
+for word in selected_words:
+    print(word)
