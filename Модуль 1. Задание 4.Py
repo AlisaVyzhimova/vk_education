@@ -1,1 +1,7 @@
 
+def a(s):
+    return ('a' in s or 'o' in s) and ('i' not in s) and ('e' not in s)
+
+if __name__ == "__main__":
+    letter = input().strip()
+    print(a(letter))
