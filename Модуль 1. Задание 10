@@ -1,0 +1,5 @@
+from collections import Counter
+text = input().lower()
+word_counts = Counter(text.split())
+most_common_word, count = word_counts.most_common(1)[0]
+print(most_common_word, count)
