@@ -1,0 +1,6 @@
+start = int(input())
+stop = int(input())
+step = int(input())
+result = map(lambda x: x**2 if x % 2 != 0 else -x, range(start, stop, step))
+for number in result:
+    print(number)
